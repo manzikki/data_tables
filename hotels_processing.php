@@ -19,7 +19,7 @@
  */
  
 // DB table to use
-$table = 'hotels2';
+$table = 'hotels3';
  
 // Table's primary key
 $primaryKey = 'hotel_id';
