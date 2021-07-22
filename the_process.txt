@@ -1,0 +1,24 @@
+Create file test.txt that contains just hotel id's one per line.
+
+python p2.py > a
+p2.py takes test.txt as its input and calls the API for each line.
+Now you have the JSON in the file a.
+
+python3 conv2relp3.py > inserts.sql
+It's important to use Python 3 to get UTF-8 correctly.
+conv2relp3.py uses the file "a". It creates datadata insert statement.
+Additionally, it creates a file latlon.txt that contains locations from "a".
+
+Generate addresses from latlon using reverse geocoding:
+
+while read line; do echo $line >> addr.txt ; geocode \"$line\"  --provider arcgis --method reverse >> addr.txt; done < latlon.txt
+
+Convert the data in addr.txt into database updates:
+python3 convG2relp3.py > updates.sql
+Again, use python3 to get correct UTF-8.
+
+Now, create the database using the create.txt file from this directory.
+Run inserts.sql
+Run updates.sql
+
+
