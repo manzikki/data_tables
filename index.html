@@ -16,7 +16,8 @@ $(document).ready(function() {
 		"processing": true,
 		"serverSide": true,
                 "timeout": 350000,
-		"ajax": "hotels_processing.php"
+		"ajax": "hotels_processing.php",
+                "columnDefs": [ { "targets": [ 12 ], "visible": false } ]
 	} );
 } );
 
@@ -35,6 +36,10 @@ $(document).ready(function() {
 <th>Price</th>
 <th>Go to..</th>
 <th>View</th>
+<th>Postal code</th>
+<th>City international name</th>
+<th>Map</th>
+<th>M</th>
 </tr>
 </thead>
 </table>

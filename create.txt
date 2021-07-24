@@ -11,6 +11,7 @@ CREATE TABLE `petfriendly` (
   `addressline2` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `zipcode` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `city` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `city_en` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `state` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `countryisocode` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -40,8 +41,8 @@ CREATE TABLE `petfriendly` (
   `rates_currency` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `rates_from_exclusive` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `accommodation_type` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lat` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lon` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  KEY `lonindex` (`lon`),
-  KEY `latindex` (`lat`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+  KEY `lonindex` (`longitude`),
+  KEY `latindex` (`latitude`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+

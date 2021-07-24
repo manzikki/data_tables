@@ -19,7 +19,7 @@
  */
  
 // DB table to use
-$table = 'hotels3';
+$table = 'hotels2';
  
 // Table's primary key
 $primaryKey = 'hotel_id';
@@ -37,7 +37,13 @@ $columns = array(
     array( 'db' => 'rating_average',     'dt' => 5),
     array( 'db' => 'rates_from',     'dt' => 6),
     array( 'db' => 'url', 'dt' => 7, 'formatter' => function( $d, $row ) { return "<a href=".$row[7].">Book</a>"; }  ),
-    array( 'db' => 'photo1', 'dt' => 8, 'formatter' => function( $d, $row ) { return "<a href=".$row[8].">Photo</a>"; }  )
+    array( 'db' => 'photo1', 'dt' => 8, 'formatter' => function( $d, $row ) { return "<a href=".$row[8].">Photo</a>"; }  ),
+    array( 'db' => 'zipcode',   'dt' => 9 ),
+    array( 'db' => 'city_en',   'dt' => 10 ),
+    array( 'db' => 'latitude', 'dt' => 12),
+    array( 'db'  => 'longitude', 'dt' => 11, 'formatter' => function( $d, $row ) {
+           return "<a href=https://www.google.com/maps/?q=".$row[11].",".$row[12].">Map</a>";
+    } )
 );
 
 // SQL server connection information
